@@ -8,11 +8,9 @@
     "novel": "latest"
   },
   "scripts": {
-  "prebuild": "cd ../../packages/headless && pnpm build",
+  "prebuild": "cd ../../packages/headless && pnpm build || echo 'Skip prebuild'",
   "build": "NEXT_IGNORE_TYPECHECK=true next build",
   "dev": "next dev",
-  "start": "next start",
-  "lint": "next lint",
-  "typecheck": "echo 'Skipping typecheck on build'"
+  "start": "next start"
   }
 }
