@@ -6,6 +6,15 @@
       "outputs": [".next/**", "dist/**"]
     },
     "dev": {},
-    "lint": {}
-  }
+    "lint": {},
+    "typecheck": {
+      "cache": false,
+      "outputs": [],
+      "dependsOn": [],
+      "inputs": []
+    }
+  },
+  "globalDependencies": [],
+  "globalEnv": [],
+  "ignore": ["**/node_modules/**"]
 }
