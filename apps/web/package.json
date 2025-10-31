@@ -4,10 +4,10 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "novel": "latest"
   },
   "scripts": {
-    "prebuild": "cd ../../packages/headless && pnpm build",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
