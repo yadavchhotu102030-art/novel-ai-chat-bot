@@ -1,6 +1,7 @@
 {
+  "version": 2,
   "rootDirectory": "apps/web",
-  "buildCommand": "pnpm install && pnpm run prebuild && SKIP_ENV_VALIDATION=1 TSC_COMPILE_ON_ERROR=true NEXT_TELEMETRY_DISABLED=1 pnpm run build",
+  "buildCommand": "pnpm -w install && pnpm -w --filter ./packages/headless build && pnpm --filter ./apps/web build",
   "outputDirectory": "apps/web/.next",
   "framework": "nextjs",
   "env": {
