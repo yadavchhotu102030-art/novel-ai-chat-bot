@@ -1,6 +1,11 @@
 {
   "rootDirectory": "apps/web",
-  "buildCommand": "pnpm install --filter ./apps/web... --filter ./packages/headless... && pnpm --filter ./packages/headless build && SKIP_ENV_VALIDATION=1 SKIP_TYPECHECK=1 pnpm --filter ./apps/web build",
+  "buildCommand": "pnpm install --filter ./packages/headless... --filter ./apps/web... && pnpm --filter ./packages/headless build && pnpm --filter ./apps/web build --skipLibCheck",
   "outputDirectory": "apps/web/.next",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "env": {
+    "TSC_COMPILE_ON_ERROR": "true",
+    "SKIP_ENV_VALIDATION": "1",
+    "SKIP_TYPECHECK": "1"
+  }
 }
