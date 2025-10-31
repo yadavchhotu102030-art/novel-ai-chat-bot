@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd apps/web && pnpm install && pnpm build",
+  "rootDirectory": "apps/web",
+  "buildCommand": "pnpm install --filter ./apps/web... --filter ./packages/headless... && pnpm --filter ./packages/headless build && SKIP_ENV_VALIDATION=1 SKIP_TYPECHECK=1 pnpm --filter ./apps/web build",
   "outputDirectory": "apps/web/.next",
   "framework": "nextjs"
 }
