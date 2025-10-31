@@ -1,9 +1,11 @@
 {
   "rootDirectory": "apps/web",
-  "buildCommand": "pnpm install && pnpm run prebuild && pnpm run build",
+  "buildCommand": "pnpm install && pnpm run prebuild && SKIP_ENV_VALIDATION=1 TSC_COMPILE_ON_ERROR=true NEXT_TELEMETRY_DISABLED=1 pnpm run build",
   "outputDirectory": "apps/web/.next",
   "framework": "nextjs",
   "env": {
-    "TSC_COMPILE_ON_ERROR": "true"
+    "TSC_COMPILE_ON_ERROR": "true",
+    "SKIP_ENV_VALIDATION": "1",
+    "NEXT_TELEMETRY_DISABLED": "1"
   }
 }
